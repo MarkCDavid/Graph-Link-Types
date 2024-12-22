@@ -459,10 +459,11 @@ export class LinkManager {
                     }
                     break;
                 default:
-                    //metadata is not a link, return null
-                    return null;
+                  // We will continue to check other DataView properties
+                  continue
             }
         }
+        // If no DataView properties match, we consider that metadata key does not exist
         return null;
     }
 

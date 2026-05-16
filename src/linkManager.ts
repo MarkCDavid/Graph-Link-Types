@@ -1,6 +1,6 @@
 
 import { ObsidianRenderer, ObsidianLink, LinkPair, GltLink, DataviewLinkType , GltLegendGraphic} from 'src/types';
-import { getAPI  } from 'obsidian-dataview';
+
 import { Text, TextStyle , Graphics, Color}  from 'pixi.js';
 // @ts-ignore
 import extractLinks from 'markdown-link-extractor';
@@ -8,7 +8,7 @@ import extractLinks from 'markdown-link-extractor';
 
 export class LinkManager {
     linksMap: Map<string, GltLink>;
-    api = getAPI();
+    api: any = null;
     currentTheme : string;
     textColor : string;
     tagColors: Map<string, GltLegendGraphic>;
@@ -460,7 +460,7 @@ export class LinkManager {
                     break;
                 default:
                     //metadata is not a link, return null
-                    return null;
+                    break;
             }
         }
         return null;

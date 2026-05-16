@@ -459,8 +459,8 @@ export class LinkManager {
                     }
                     break;
                 default:
-                  // We will continue to check other DataView properties
-                  break;
+				    // We will continue to check other DataView properties
+				    break;
             }
         }
         // If no DataView properties match, we consider that metadata key does not exist
